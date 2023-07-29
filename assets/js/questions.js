@@ -34,8 +34,28 @@ function timeCountdown(seconds) {
 
 timeCountdown(90);
 
-//Create elements for the quiz
+function startQuiz(q) {
+  var q = document.getElementById("questions");
+  var hide = document.getElementById("start-screen");
+  if (q.style.display === "none") {
+    (q.style.display = "block") + (hide.className = "hide");
+  } else {
+    (q.style.display = "none") + (hide.className = "start");
+  }
+  return;
+}
 
+// function hideStart(hide) {
+//   var hide = document.getElementById("start-screen");
+//   if ((q.style.display = "block")) {
+//     hide.className = "hide";
+//   } else {
+//     hide.className = "start";
+//   }
+
+//   return hide;
+// }
+//need to code in buttons for answers
 //set function to toggle and hide elements
 
 //Function/if else statements to determine what happens if user selects correct and incorrect answers
