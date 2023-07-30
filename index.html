@@ -30,50 +30,68 @@
           <h3 class="question-one">
             1. If a value is "True" or "False" it is a ______ value
           </h3>
-          <form id="q1">
-            <input class="choice" value="boolean" />Boolean
-            <input class="choice" value="numeric" />Numeric
-            <input class="choice" value="string" />String
-            <input class="choice" value="none" />None of these
-          </form>
-          <h3 class="question-two">
-            2. What is the first number of the index in an Array?
-          </h3>
-          <form id="q2">
-            <input class="choice" value="one" />1
-            <input class="choice" value="ten" />10
-            <input class="choice" value="zero" />0
-            <input class="choice" value="hundred" />100
-          </form>
-          <h3 class="question-three">
-            3. What is the function to check code in the console?
-          </h3>
-          <form id="q3">
-            <input class="choice" value="check" />console.check
-            <input class="choice" value="log" />console.log
-            <input class="choice" value="window" />console.window
-            <input class="choice" value="code" />console.code
-          </form>
-          <h3 class="question-four">4. What does the .Map function do?</h3>
-          <form id="q4">
-            <input class="choice" value="map" />Creates a function to map the
-            index of an array <input class="choice" value="merge" />Merges two
-            seperate arrays together
-            <input class="choice" value="duplicates" />Creates a new array which
-            duplicates the values of another array
-            <input class="choice" value="function" />Creates a new array with
-            the results of a function
-          </form>
-          <h3 class="question-five">
-            5. What does NaN represent in JavaScript?
-          </h3>
-          <form id="q5">
-            <input class="choice" value="numeric" />Numeric Value
-            <input class="choice" value="NaN" />Not a Number
-            <input class="choice" value="undefined" />Undefined Value
-            <input class="choice" value="no" />No Value
-          </form>
-        </div>
+          <div id="q1">
+            <button class="choice" id="true">Boolean</button>
+            <button class="choice" id="false">Numeric</button>
+            <button class="choice" id="false">String</button>
+            <button class="choice" id="false">None of these</button>
+            <p id="incorrect" class ="hide">Incorrect!</p> <p id = "correct" class = "hide">Correct!</p>
+          </div>   
+        <div id="questions" class="hide">
+          <h2 id="question-title" class="question-two">Question Two</h2>
+          <div id="choices" class="choices">
+            <h3>
+             2. What is the first number of the index in an Array?
+            </h3>
+            <div id="q2">
+              <button class="choice" id="false">1</button>
+              <button class="choice" id="false">10</button>
+              <button class="choice" id="true">0</button>
+              <button class="choice" id="false">100</button>
+              <p id="incorrect" class ="hide">Incorrect!</p>  <p id = "correct" class = "hide">Correct!</p>
+            </div>
+          </div>
+          <div id="questions" class="hide">
+            <h2 id="question-title" class="question-three">Question Three</h2>
+            <div id="choices" class="choices">
+              <h3>
+                3. What is the function to check code in the console?
+              </h3>
+              <div id="q1">
+                <button class="choice" id="false">console.check</button>
+                <button class="choice" id="true">console.log</button>
+                <button class="choice" id="false">console.code</button>
+                <button class="choice" id="false">console.window</button>
+                <p id="incorrect" class ="hide">Incorrect!</p>  <p id = "correct" class = "hide">Correct!</p>
+              </div>
+            </div>
+            <div id="questions" class="hide">
+              <h2 id="question-title" class="question-four">Question Four</h2>
+              <div id="choices" class="choices">
+                <h3>
+                  4. What does the .Map function do?
+                </h3>
+                <div id="q1">
+                  <button class="choice" id="false"> Creates a function to map the index of an array</button>
+                  <button class="choice" id="false">Merges two seperate arrays together</button>
+                  <button class="choice" id="false">Creates a new array which duplicates the values of another array</button>
+                  <button class="choice" id="true">Creates a new array with the results of a function</button>
+                  <p id="incorrect" class ="hide">Incorrect!</p>  <p id = "correct" class = "hide">Correct!</p>
+                </div>
+              </div>
+              <div id="questions" class="hide">
+                <h2 id="question-title" class="question-five">Question Five</h2>
+                <div id="choices" class="choices">
+                  <h3>
+                    5. What does NaN represent in JavaScript? 
+                  </h3>
+                  <div id="q5">
+                    <button class="choice" id="true">Boolean</button>
+                    <button class="choice" id="false">Numeric</button>
+                    <button class="choice" id="false">String</button>
+                    <button class="choice" id="false">None of these</button>
+                    <p id="incorrect" class ="hide">Incorrect!</p>  <p id = "correct" class = "hide">Correct!</p>
+                  </div>
       </div>
 
       <div id="end-screen" class="hide">

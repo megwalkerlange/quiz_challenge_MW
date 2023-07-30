@@ -7,6 +7,8 @@ var questionsCard = document.querySelector("#questions");
 var questionChoices = document.querySelector("#choices");
 var questionTitles = document.querySelector("#question-title");
 var end = document.querySelector("#end-screen");
+// var incorrectAlert = document.getElementById("incorrect");
+// incorrectAlert.setAttribute("incorrect", "feedback");
 
 // startButton.addEventListener("click", timeCountdown());
 //Countdown function
@@ -33,7 +35,7 @@ function timeCountdown(seconds) {
 }
 
 timeCountdown(90);
-
+//function to show questions and hide start page
 function startQuiz(q) {
   var q = document.getElementById("questions");
   var hide = document.getElementById("start-screen");
@@ -45,18 +47,30 @@ function startQuiz(q) {
   return;
 }
 
-// function hideStart(hide) {
-//   var hide = document.getElementById("start-screen");
-//   if ((q.style.display = "block")) {
-//     hide.className = "hide";
-//   } else {
-//     hide.className = "start";
-//   }
+var correct;
+var incorrect;
 
-//   return hide;
-// }
-//need to code in buttons for answers
-//set function to toggle and hide elements
+questionChoices.addEventListener("click", function quizAnswers() {
+  correct = document.getElementById("true");
+  incorrect = document.getElementById("false");
+  incorrectAlert = document.getElementById("incorrect");
+  correctAlert = document.getElementById("correct");
+
+  if ((incorrect.value = "false")) {
+    setTimeout((incorrectAlert.className = "start"), 3000);
+  }
+  if ((correct.value = "true")) {
+  }
+});
+
+// questionChoices.addEventListener("click", quizAnswers);
+//show questions one by one as user selects questions
+
+//set variable for the amount of questions
+
+//set function to hide all the questions except one
+
+//use
 
 //Function/if else statements to determine what happens if user selects correct and incorrect answers
 //if user (answer = true) - user + 1 point
