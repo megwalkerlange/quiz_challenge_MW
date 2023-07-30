@@ -7,11 +7,11 @@ var questionsCard = document.querySelector("#questions");
 var questionChoices = document.querySelector("#choices");
 var questionTitles = document.querySelector("#question-title");
 var end = document.querySelector("#end-screen");
-// var incorrectAlert = document.getElementById("incorrect");
-// incorrectAlert.setAttribute("incorrect", "feedback");
+correct = document.getElementById("true");
+incorrect = document.getElementById("false");
+incorrectAlert = document.getElementById("incorrect");
+correctAlert = document.getElementById("correct");
 
-// startButton.addEventListener("click", timeCountdown());
-//Countdown function
 var timeLeft = 90;
 var timeStart = 0;
 
@@ -47,19 +47,26 @@ function startQuiz(q) {
   return;
 }
 
-var correct;
-var incorrect;
+// correct = document.getElementById("true");
+// incorrect = document.getElementById("false");
+// incorrectAlert = document.getElementById("incorrect");
+// correctAlert = document.getElementById("correct");
 
-questionChoices.addEventListener("click", function quizAnswers() {
-  correct = document.getElementById("true");
-  incorrect = document.getElementById("false");
-  incorrectAlert = document.getElementById("incorrect");
-  correctAlert = document.getElementById("correct");
-
+incorrect.addEventListener("click", function wrongAnswers() {
   if ((incorrect.value = "false")) {
-    setTimeout((incorrectAlert.className = "start"), 3000);
+    incorrectAlert.className = "start";
+    setInterval(() => {
+      incorrectAlert.className = "hide";
+    }, 3000);
   }
+});
+
+correct.addEventListener("click", function correctAnswers() {
   if ((correct.value = "true")) {
+    correctAlert.className = "start";
+    setInterval(() => {
+      correctAlert.className = "hide";
+    }, 3000);
   }
 });
 
