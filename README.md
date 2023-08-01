@@ -19,6 +19,10 @@ My goal is to go back and complete these tasks to further and consolidate my und
 
 URL of deployed site :
 
+Screenshot:
+
+![](2023-08-01-16-48-41.png)
+
 I used code/solutions from the sources below to help me in this challenge:
 
 lines 37 - 44 in questions.js
