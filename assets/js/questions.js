@@ -10,13 +10,15 @@ var questionBlocks = document.querySelector("#question-title");
 var end = document.querySelector("#end-screen");
 
 //variables created for the click event on questions
-// correct = document.getElementById("true");
-// incorrect = document.getElementById("false");
+var correct = document.getElementById("#true");
+var incorrect = document.getElementById("#false");
+var answerButtons = document.querySelectorAll(".choice");
 var answerButtons = document.querySelectorAll(".choice");
 incorrectAlert = document.getElementById("incorrect");
 correctAlert = document.getElementById("correct");
 
 //variables for time/score
+
 var timeLeft = 90;
 var score = 0;
 
@@ -29,18 +31,6 @@ var questionFour = document.getElementById("questions-4");
 var questionFive = document.getElementById("questions-5");
 
 var questionTracker = 1;
-
-//create array for question variables
-
-// var questionList = [];
-
-// questionList.push(questionOne);
-// questionList.push(questionTwo);
-// questionList.push(questionThree);
-// questionList.push(questionFour);
-// questionList.push(questionFive);
-
-// console.log(questionList);
 
 //function to hide start screen and show first question when start button is clicked
 startButton.addEventListener("click", function startQuiz() {
@@ -57,27 +47,28 @@ startButton.addEventListener("click", function startQuiz() {
   }, 1000);
 });
 
-//function to set alert on page when incorrect anser is selected
-
-for (let i = 0; i < answerButtons.length; i++) {
+for (let i = 0; i < answerButtons.length; i++)
   answerButtons[i].addEventListener("click", function (e) {
-    if (this.value === "correct") {
+    if (answerButtons[i].value === "correct") {
       console.log("correct");
+      score++;
+      console.log("the score is  " + score);
     }
-
-    if (this.value === "incorrect") {
+    if (answerButtons[i].value === "incorrect") {
       console.log("incorrect");
+
+      document.getElementById("questions-" + questionTracker).style.display =
+        "block";
+    } else {
+      document.getElementById("questions-" + questionTracker).style.display =
+        "none";
+
+      questionTracker++;
+
+      document.getElementById("questions-" + questionTracker).style.display =
+        "block";
     }
-
-    document.getElementById("questions-" + questionTracker).style.display =
-      "none";
-
-    questionTracker++;
-
-    document.getElementById("questions-" + questionTracker).style.display =
-      "block";
   });
-}
 
 // incorrect.addEventListener("click", function wrongAnswers() {
 //   if ((incorrect.value = "false")) {
@@ -97,14 +88,6 @@ for (let i = 0; i < answerButtons.length; i++) {
 //     }, 3000);
 //   }
 // });
-
-correct.addEventListener("click", function logScore() {
-  if ((correct.value = "true")) {
-    score++;
-    console.log(score);
-  }
-  return;
-});
 
 // correct.addEventListener("click", function changeQuestion() {
 //   var questionOne = document.getElementById("questions-1");
