@@ -19,6 +19,8 @@ My goal is to go back and complete these tasks to further and consolidate my und
 
 URL of deployed site :
 
+https://megwalkerlange.github.io/quiz_challenge_MW/
+
 Screenshot:
 
 ![](2023-08-01-16-48-41.png)
